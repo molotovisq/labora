@@ -1,17 +1,19 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('layouts.app')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
+@section('content')
+    <div class="grid gap-6 md:grid-cols-2">
+        <div class="card bg-base-100 shadow-xl">
+            <div class="card-body">
+                <h2 class="card-title">Card DaisyUI</h2>
+                <p>Se você está vendo estilos aqui, DaisyUI + Tailwind estão funcionando.</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Ação</button>
                 </div>
             </div>
         </div>
+
+        <div class="alert alert-success">
+            <span>Classes do Tailwind também foram aplicadas!</span>
+        </div>
     </div>
-</x-app-layout>
+@endsection
