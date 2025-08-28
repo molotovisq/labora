@@ -25,6 +25,7 @@
             <div class="mx-2 flex-1 px-2 font-bold text-lg"> {{ config('app.name', 'Laravel') }} </div>
             <div class="hidden flex-none lg:block">
                 <ul class="menu menu-horizontal">
+                    <li><x-theme-toggler></x-theme-toggler></li>
                     <li><a href="{{ route('profile.edit') }}">Perfil</a></li>
                 </ul>
             </div>
@@ -35,12 +36,21 @@
         </main>
     </div>
     <div class="drawer-side">
-        <label id="side-overlay" for="sidebar-drawer" class="drawer-overlay"></label>
-        <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-            <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
-            <li><a href="{{ route('profile.edit') }}">Perfil</a></li>
-            <li><a href="{{ route('profile.edit') }}">Alternar Tema</a></li>
-        </ul>
+        <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+
+            <label id="side-overlay" for="sidebar-drawer" class="drawer-overlay"></label>
+
+            <div class="flex items-center px-2 py-4">
+                <span class="font-bold text-3xl text-primary">Labora</span>
+                <span class="badge badge-sm badge-outline ml-2">v1</span>
+            </div>
+            <ul>
+
+                <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ route('profile.edit') }}">Perfil</a></li>
+                <li><a href="{{ route('profile.edit') }}">Alternar Tema</a></li>
+            </ul>
+        </div>
     </div>
     <script>
         const body = document.body
